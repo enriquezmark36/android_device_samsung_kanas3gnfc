@@ -3,9 +3,6 @@ DEVICE_TREE := device/samsung/kanas
 CM_PLATFORM_SDK_VERSION := 7	# Required for libf2fs.so
 override TARGET_OUT_VENDOR_SHARED_LIBRARIES = $(TARGET_OUT_SHARED_LIBRARIES)
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := jactivelte,jflte,jfltexx,jgedlte,jfltevzw,jflteusc,jfltecri,jflteatt,jfltecan,jfltetmo,jfltespr
-
 # Platform
 TARGET_ARCH := arm
 TARGET_BOARD_PLATFORM := sc8830
@@ -38,6 +35,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # TWRP specific build flags
+TW_THEME := portrait_hdpi
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/platform/sec-thermistor/temperature"
@@ -50,11 +48,8 @@ TW_INCLUDE_NTFS_3G := true
 TW_EXCLUDE_SUPERSU := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-
 TW_HAS_DOWNLOAD_MODE := true
 TW_USE_TOOLBOX := true
 TWRP_INCLUDE_LOGCAT := true
-
-TW_THEME := portrait_hdpi
-
 TWHAVE_SELINUX := true
+TW_INCLUDE_CRYPTO := true
