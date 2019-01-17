@@ -1,2 +1,1 @@
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cm.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_kanas.mk
